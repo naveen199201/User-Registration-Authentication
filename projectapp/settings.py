@@ -74,7 +74,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'projectapp.wsgi.application'
 CORS_ORIGIN_ALLOW_ALL = True
-ALLOWED_HOSTS = ['*']
+
 
 
 # Database
@@ -82,13 +82,8 @@ ALLOWED_HOSTS = ['*']
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'URL': 'postgres://postgres:4CGe5bC46gdGD2Cc1f16GG52fDBG5Fga@roundhouse.proxy.rlwy.net:33587/railway',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': '4CGe5bC46gdGD2Cc1f16GG52fDBG5Fga',
-        'HOST': 'roundhouse.proxy.rlwy.net',
-        'PORT': 33587,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
